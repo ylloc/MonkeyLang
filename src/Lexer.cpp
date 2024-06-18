@@ -1,7 +1,8 @@
 #include <Lexer.h>
 #include <iostream>
 
-Lexer::Lexer(std::string &&data): data(std::move(data)) { ReadChar(); }
+Lexer::Lexer(std::string &&data)
+  : data(std::move(data)) { ReadChar(); }
 
 char Lexer::ReadChar() {
   if (position >= data.size()) { [[unlikely]]
